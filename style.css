@@ -1,0 +1,242 @@
+/*For large screens (desktop)*/
+*{
+    margin: 0;
+    padding: 0;
+   
+    
+  
+}
+header{
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+  
+    
+}
+
+ 
+.title{
+    background-color: #444;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 25px;
+}
+nav{
+    background-color: #444;
+    color: white;
+    padding: 10px 0;
+} 
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+nav ul{
+    list-style: none;
+    gap: 20px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+nav ul li a:hover{
+    background-color: #555;
+}
+#main{
+   
+    background-color: #f8f7f7;
+    margin: 20px;
+    border-radius: 5px;
+}
+.hero-image{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    margin-bottom: 5px;
+}
+img{
+    width: 100%;
+    height: auto;
+   
+}
+#about{
+    
+
+    font-size: 18px;
+}
+.about-more{
+    display: flex;
+    flex: 1;
+}
+.more{
+    gap: 20px;
+    padding: 20px;
+    
+}
+.more h2{
+    text-align: center;
+}
+.btn{
+
+   background-color: #505050;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px
+}
+    
+#hero{
+    font-size: 18px
+}
+.hero-text{
+    display: flex;
+}
+.hero-title{
+    background-color: #ccc;
+    padding: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+    justify-content: space-between;
+    
+}
+.about-a{
+    display: grid;
+    background-color: #f4f4f4;
+   
+    padding: 20px;
+}
+.about-a h2{
+    text-align: center;
+    
+}
+#courses{
+    margin: 20px;
+    font-size: 18px;
+}
+#courses h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.course-list{
+    display: flex ;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+.course-item{
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.course-link{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0; 
+    width: 100%;
+}
+
+
+/* For tablets (screen width 768px and below) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        grid-template-columns: 1fr; /* Single column for images */
+    }
+
+    .about-more {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .hero-title {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .course-list {
+        flex-direction: column; /* Stack courses vertically */
+    }
+}
+
+/* For mobile devices (screen width 480px and below) */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .btn {
+        width: 100%; /* Make buttons full-width */
+        text-align: center;
+    }
+
+    .hero-title {
+        padding: 10px;
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .about-a {
+        padding: 10px;
+    }
+
+    .course-item {
+        padding: 20px;
+        margin: 5px;
+    }
+}
+/* Theme styles */
+body.light-theme {
+    background-color: #cdbdbd;
+    color: #090909;
+}
+
+body.dark-theme {
+    background-color: #0f0d0d;
+    color: #be8f8f;
+}
+
+/* Animation for theme toggle button */
+.theme-toggle-btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #2e2e2e;
+    color: rgb(248, 244, 244);
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle-btn.animate {
+    transform: scale(1.2); /* Scale up during animation */
+}
